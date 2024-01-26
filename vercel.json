@@ -1,26 +1,28 @@
 {
-  "devCommand": "vite --port $PORT",
-  "framework": "vue",
-  "rewrites": [
-    {
-      "source": "/:__PREFIX(~)/:__PATH(.+)",
-      "destination": "/api/image"
-    },
-    {
-      "source": "/:__PREFIX(ajax|rpc|.+\\.php)/:__PATH*",
-      "destination": "/api/http"
-    },
-    {
-      "source": "/api/illust/random",
-      "destination": "/api/random"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/-/:__PATH*",
-      "destination": "https://px.dwulpu.pp.ua/:__PATH"
-    }
-  ],
-  "headers": []
-  "regions": ["sin1"]
+    "devCommand": "vite --port $PORT",
+    "framework": "vue",
+    "rewrites": [
+        {
+            "source": "/:__PREFIX(~)/:__PATH(.+)",
+            "destination": "/api/image"
+        },
+        {
+            "source": "/:__PREFIX(ajax|rpc|.+\\.php)/:__PATH*",
+            "destination": "/api/http"
+        },
+        {
+            "source": "/api/illust/random",
+            "destination": "/api/random"
+        }
+    ],
+    "redirects": [
+        {
+            "source": "/-/:__PATH*",
+            "destination": "https://px.dwulpu.pp.ua/:__PATH"
+        }
+    ],
+    "headers": [],
+    "regions": [
+        "sin1"
+    ]
 }
