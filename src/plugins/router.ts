@@ -15,10 +15,21 @@ const routes: RouteRecordRaw[] = [
     component: () => import('@/view/artworks.vue'),
   },
   {
+    path: '/following/latest',
+    alias: ['/bookmark_new_illust'],
+    name: 'following-latest',
+    component: () => import('@/view/following-latest.vue'),
+  },
+  {
     path: '/users/:id',
     name: 'users',
     alias: ['/u/:id'],
     component: () => import('@/view/users.vue'),
+  },
+  {
+    path: '/users/:id/following',
+    name: 'following',
+    component: () => import('@/view/following.vue'),
   },
   {
     path: '/search/:keyword',
@@ -39,6 +50,11 @@ const routes: RouteRecordRaw[] = [
     path: '/login',
     name: 'user-login',
     component: () => import('@/view/login.vue'),
+  },
+  {
+    path: '/ugoira',
+    name: 'ugoira-test',
+    component: () => import('@/view/ugoira.vue'),
   },
   {
     path: '/about',
