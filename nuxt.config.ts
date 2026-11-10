@@ -1,6 +1,11 @@
 import { resolve } from 'node:path'
 import Icons from 'unplugin-icons/vite'
 
+const fnbPath = resolve(
+  import.meta.dirname,
+  './app/assets/styles/_fnb.scss',
+).replaceAll('\\', '/')
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-01',
 
@@ -41,10 +46,10 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `@use "${resolve(import.meta.dirname, './app/assets/styles/_fnb.scss')}" as *;`,
+          additionalData: `@use "${fnbPath}" as *;`,
         },
         sass: {
-          additionalData: `\n@use "${resolve(import.meta.dirname, './app/assets/styles/_fnb.scss')}" as *\n`,
+          additionalData: `\n@use "${fnbPath}" as *\n`,
         },
       },
     },
